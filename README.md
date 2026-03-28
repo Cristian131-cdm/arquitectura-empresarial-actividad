@@ -1,5 +1,5 @@
 # Práctica de Arquitectura de Software - SROP
-**Alumno:** [Tu Nombre]  
+**Crstian Aparicio MOncada 
 **Semestre:** 4to Semestre - Ingeniería de Software y Sistemas Computacionales  
 **Institución:** Universidad La Salle Nezahualcóyotl
 
