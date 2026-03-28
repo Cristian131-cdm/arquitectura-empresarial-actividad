@@ -1,22 +1,26 @@
-# Práctica de Arquitectura de Software - SROP
-**Crstian Aparicio MOncada 
+# Práctica de Control de Versiones y Arquitectura de Software
+**Alumno:** Cristian Aparicio Moncada  
 **Semestre:** 4to Semestre - Ingeniería de Software y Sistemas Computacionales  
-**Institución:** Universidad La Salle Nezahualcóyotl
+**Institución:** Universidad La Salle Nezahualcóyotl - Grupo 401
 
-## 1. Estructura de Control de Versiones
-Para este proyecto se implementó una jerarquía profesional basada en:
-* **Trunk (Main):** Línea de desarrollo principal y estable de la arquitectura.
-* **Branches (Feature Branches):** Uso de ramas paralelas (ej. `feature-rest`) para el desarrollo de servicios web sin afectar el tronco principal.
-* **Tags (Releases):** Marcado de versiones finales (v1.0.0) para el despliegue empresarial.
+## 1. Mapeo de la Estructura de Directorios (Trunk, Tags y Branches)
+En esta práctica se aplicó una organización profesional utilizando la jerarquía de Git en GitHub:
+* **Trunk (Rama main):** Se definió como la línea de desarrollo principal y estable para la arquitectura empresarial.
+* **Branches (Ramas de características):** Se creó la rama `feature-rest` para desarrollar nuevas funcionalidades de servicios web sin afectar la estabilidad del tronco principal.
+* **Tags (Releases):** Se utilizó la función de etiquetas (`git tag v1.0.0`) para marcar la versión final de la entrega, simulando un despliegue de software empresarial.
 
-## 2. Aplicación de Patrones y Servicios Web
-### Justificación de Interoperabilidad: REST vs SOAP
-En la arquitectura desarrollada, se ha optado por un diseño basado en **REST (Representational State Transfer)** por las siguientes razones:
-* **Rendimiento:** Menor consumo de ancho de banda al utilizar JSON en lugar del XML pesado de SOAP.
-* **Escalabilidad:** Ideal para servicios distribuidos y aplicaciones móviles.
-* **Interoperabilidad:** Facilidad de integración con diversas plataformas modernas mediante métodos HTTP estándar.
+## 2. El Ciclo de Trabajo en la Práctica
+Se replicó el ciclo básico de desarrollo colaborativo mediante los siguientes comandos de Git:
+* **Copia de trabajo local:** Realizada mediante `git clone` del repositorio remoto.
+* **Actualización y cambios:** Uso de `git pull` para sincronizar y `git add`/`git commit` para el control de versiones del código fuente.
+* **Fusión y Resolución de Conflictos:** Se simuló un conflicto de código entre las ramas `main` (protocolo SOAP) y `feature-rest` (protocolo REST), resolviéndolo mediante una fusión manual para integrar una arquitectura híbrida.
 
-*Nota: Durante la práctica se simuló una arquitectura híbrida resolviendo un conflicto de fusión con servicios SOAP legados.*
+## 3. Aplicación de Patrones y Servicios Web
+### Documentación de la API: REST vs SOAP
+Para esta arquitectura, se justifica la elección de servicios **REST** sobre SOAP debido a:
+* **Interoperabilidad:** Facilidad para conectar sistemas distribuidos modernos.
+* **Rendimiento:** El uso de JSON reduce la carga en el ancho de banda en comparación con el XML de SOAP.
+* **Flexibilidad:** Mayor facilidad de implementación en el ciclo de vida del desarrollo actual.
 
-## 3. Integración Continua (Nuevas Tendencias)
-Se investigó la implementación de **GitHub Actions** para automatizar el ciclo de vida del software. Mediante flujos de trabajo (Workflows), es posible ejecutar pruebas automáticas y despliegues en servicios como Firebase o Netlify cada vez que se realiza un `push` a la rama `main`, garantizando la estabilidad de la arquitectura empresarial.
+## 4. Nuevas Tendencias: Integración Continua
+Como parte de la investigación, se analizó el uso de **GitHub Actions** para automatizar el despliegue de servicios. Esta herramienta permite que, tras cada `merge` exitoso en el Trunk, se ejecuten procesos automáticos de validación y despliegue, optimizando la entrega de software empresarial.
